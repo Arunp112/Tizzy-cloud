@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; 
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
@@ -20,7 +20,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+        <nav className="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
           <Link to="/cloud-email">Tizzy Cloud Email</Link>
           <Link to="/cloud-hosting">Tizzy Cloud Hosting</Link>
 
@@ -66,7 +66,7 @@ export default function Header() {
         </nav>
 
         {/* Account + Sign In + Cart - Hidden on Mobile */}
-        <div className="hidden md:flex justify-between items-center gap-5">
+        <div className="hidden lg:flex justify-between items-center gap-5">
           <div className="relative group">
             <button className="cursor-pointer flex items-center bg-blue-500 text-white px-3 py-2 rounded-3xl text-sm font-medium">
               My account
@@ -99,16 +99,13 @@ export default function Header() {
           <div className="relative">
             <Link to="/cart" aria-label="Go to Cart">
               <FaShoppingCart />
-              {/* Example Cart Badge */}
-              {/* <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-                3
-              </span> */}
+              {/* Example Cart Badge */} 
             </Link>
           </div>
         </div>
 
         {/* Hamburger - Visible only on Mobile */}
-        <button onClick={() => setIsOpen(true)} className="md:hidden">
+        <button onClick={() => setIsOpen(true)} className="lg:hidden">
           <Menu size={24} />
         </button>
       </div>
