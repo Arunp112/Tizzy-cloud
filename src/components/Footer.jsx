@@ -13,7 +13,7 @@ export default function Footer() {
       <hr className="py-4 border-gray-700" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-10">
-        {/* Left */}
+        {/* Left Section */}
         <div className="md:w-1/3">
           <div className="mb-4">
             <img
@@ -52,37 +52,51 @@ export default function Footer() {
             <p className="font-semibold text-white mb-2">Company</p>
             <ul className="space-y-1">
               <li className="hover:text-blue-600 cursor-pointer">
-                About Tizzy
+                <a href="#about">About Tizzy</a>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer">Contact Us</li>
-              <li className="hover:text-blue-600 cursor-pointer">Media</li>
-              <li className="hover:text-blue-600 cursor-pointer">Legal</li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#contact">Contact Us</a>
+              </li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#media">Media</a>
+              </li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#legal">Legal</a>
+              </li>
             </ul>
           </div>
           <div>
             <p className="font-semibold text-white mb-2">Products</p>
             <ul className="space-y-1">
-              <li className="hover:text-blue-600 cursor-pointer">Tizzy Mail</li>
               <li className="hover:text-blue-600 cursor-pointer">
-                Tizzy Cloud
+                <a href="#tizzyMail">Tizzy Mail</a>
               </li>
               <li className="hover:text-blue-600 cursor-pointer">
-                Google Workspace
+                <a href="#tizzyCloud">Tizzy Cloud</a>
               </li>
               <li className="hover:text-blue-600 cursor-pointer">
-                Microsoft 365
+                <a href="#googleWorkspace">Google Workspace</a>
+              </li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#microsoft365">Microsoft 365</a>
               </li>
             </ul>
           </div>
           <div>
             <p className="font-semibold text-white mb-2">Support</p>
             <ul className="space-y-1">
-              <li className="hover:text-blue-600 cursor-pointer">Support</li>
-              <li className="hover:text-blue-600 cursor-pointer">Migration</li>
               <li className="hover:text-blue-600 cursor-pointer">
-                Backup & Restore
+                <a href="#support">Support</a>
               </li>
-              <li className="hover:text-blue-600 cursor-pointer">Career</li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#migration">Migration</a>
+              </li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#backup">Backup & Restore</a>
+              </li>
+              <li className="hover:text-blue-600 cursor-pointer">
+                <a href="#career">Career</a>
+              </li>
             </ul>
           </div>
         </div>

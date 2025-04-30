@@ -13,7 +13,7 @@ const PlanCard = ({
   const isOpen = openCard === id;
 
   return (
-    <div className="relative bg-white rounded-2xl shadow-xl p-6 w-[320px] transition-all duration-300 hover:shadow-2xl">
+    <div className="relative bg-white rounded-2xl shadow-xl p-6 w-full md:w-[320px] transition-all duration-300 hover:shadow-2xl">
       {/* Top Icon */}
       <div
         onClick={() => setOpenCard(isOpen ? null : id)}
@@ -72,7 +72,7 @@ const HostingPlans = () => {
       </h2>
       <div className="w-16 h-1 bg-blue-500 rounded mx-auto mb-10"></div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         {/* Plan Cards */}
         <PlanCard
           id="basic"
@@ -113,7 +113,8 @@ const HostingPlans = () => {
           setOpenCard={setOpenCard}
         />
       </div>
-      <button className="mt-10 bg-blue-600 text-white px-7 py-2 rounded-lg hover:bg-white hover:text-black hover:border ">
+
+      <button className="mt-10 bg-blue-600 text-white px-7 py-2 rounded-lg hover:bg-white hover:text-black hover:border transition duration-300 ease-in-out">
         View All Plans
       </button>
     </div>

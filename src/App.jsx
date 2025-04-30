@@ -23,6 +23,7 @@ function App() {
           <Route path="/sign-in" element={<div className="text-center font-semibold text-3xl">Sign in page</div>} />
           <Route path="/partner-with-us" element={<div className="text-center font-semibold text-3xl">Partner with us</div>} />
           <Route path="/sales/inquiry" element={<div className="text-center font-semibold text-3xl">Sales Inquiry</div>} />
+          <Route path="/cart" element={<div className="text-center font-semibold text-3xl">Cart</div>} />
         </Route>
       </Routes>
     </Router>

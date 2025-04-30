@@ -19,9 +19,9 @@ const socials = [
 
 export default function SocialIcons() {
   return (
-    <div className="flex justify-center gap-6 py-10 bg-[#f8fbff]">
+    <div className="flex justify-center gap-6 py-10 bg-[#f8fbff] flex-wrap justify-center md:justify-start">
       {socials.map((item, idx) => (
-        <div key={idx} className="relative group">
+        <div key={idx} className="relative group mb-4 md:mb-0">
           <a
             href={item.link}
             target="_blank"

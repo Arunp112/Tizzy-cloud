@@ -11,7 +11,7 @@ export default function Header() {
     <header className="bg-white shadow sticky top-0 z-50">
       <div className="mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" aria-label="Go to Home">
           <img
             src="https://www.tizzycloud.com/assets/tizzy_logo_new.png"
             alt="Tizzy"
@@ -26,11 +26,20 @@ export default function Header() {
 
           {/* Dropdown */}
           <div className="relative group">
-            <button className="cursor-pointer flex items-center gap-1">
+            <button
+              className="cursor-pointer flex items-center gap-1"
+              aria-haspopup="true"
+              aria-expanded={mobileDropdownOpen ? "true" : "false"}
+              onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+            >
               Managed Services <ChevronDown size={16} />
             </button>
             {/* Dropdown Menu */}
-            <div className="absolute left-0 top-full mt-2 bg-white border rounded-md shadow-md w-48 opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity z-50 hidden group-hover:block">
+            <div
+              className={`absolute left-0 top-full mt-2 bg-white border rounded-md shadow-md w-48 opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity z-50 ${
+                mobileDropdownOpen ? "opacity-100 visible" : "opacity-0"
+              }`}
+            >
               <Link
                 to="/managed/web"
                 className="block px-4 py-2 hover:bg-gray-100"
@@ -87,8 +96,14 @@ export default function Header() {
           <div>
             <Link to="/signin">Sign in</Link>
           </div>
-          <div>
-            <FaShoppingCart />
+          <div className="relative">
+            <Link to="/cart" aria-label="Go to Cart">
+              <FaShoppingCart />
+              {/* Example Cart Badge */}
+              {/* <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                3
+              </span> */}
+            </Link>
           </div>
         </div>
 

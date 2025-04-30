@@ -14,7 +14,7 @@ const TestimonialCard = ({ testimonial }) => {
         <img
           src={testimonial.image}
           alt="User"
-          className="w-16 h-16 rounded-full object-cover border border-gray-200 shadow-sm"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border border-gray-200 shadow-sm"
         />
         <div>
           <h4 className="text-blue-600 font-semibold text-base sm:text-lg">
@@ -22,7 +22,6 @@ const TestimonialCard = ({ testimonial }) => {
           </h4>
           <p className="text-sm text-gray-500 uppercase font-semibold tracking-wide">
             {testimonial.location}
-            {/* {testimonial.flag} */}
           </p>
         </div>
       </div>

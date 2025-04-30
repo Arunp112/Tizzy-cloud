@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
 
 const features = [
   {
@@ -50,7 +49,7 @@ const FeatureTabs = () => {
       <div className="md:w-1/3 space-y-3">
         {features.map((item, index) => (
           <motion.button
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             key={index}
             onClick={() => setActiveTab(index)}
@@ -82,9 +81,7 @@ const FeatureTabs = () => {
             >
               {features[activeTab].title}
             </motion.h2>
-            <p className="text-gray-600 text-lg">
-              {features[activeTab].content}
-            </p>
+            <p className="text-gray-600 text-lg">{features[activeTab].content}</p>
             {features[activeTab].image && (
               <motion.img
                 src={features[activeTab].image}

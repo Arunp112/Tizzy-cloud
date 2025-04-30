@@ -24,30 +24,30 @@ const features = [
 
 export default function FeatureCards() {
   return (
-    <section className="bg-white py-8 px-4 text-center">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map((item, index) => (
           <div
             key={index}
-            className="border rounded-lg p-6 shadow-sm text-left hover:shadow-md transition"
+            className="border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-lg transition-all duration-300"
           >
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-6">
               <img
                 src={item.icon}
                 alt={item.title}
-                className="w-10 h-10"
+                className="w-16 h-16 object-contain"
                 title={item.tooltip}
               />
               <div>
-                <h3 className="text-blue-600 font-semibold">{item.title}</h3>
-                <p className="text-sm text-gray-700 mt-1">{item.description}</p>
+                <h3 className="text-xl font-semibold text-blue-600">{item.title}</h3>
+                <p className="text-base text-gray-700 mt-2">{item.description}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-md">
+      <button className="mt-8 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-all duration-300">
         View All
       </button>
     </section>
