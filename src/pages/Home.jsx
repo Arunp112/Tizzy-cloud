@@ -79,7 +79,7 @@ const Home = () => {
           <ActivateService />
         </div>
       </div>
-      <button className="fixed left-0 top-1/2 transform -translate-y-1/2 rotate-[-90deg] bg-blue-600 text-white px-3 py-2 text-xs font-medium rounded-tr-md rounded-tl-md shadow-md">
+      <button className=" hidden md:block fixed left-0 top-1/2 transform -translate-y-1/2 rotate-[-90deg] bg-blue-600 text-white px-3 py-2 text-xs font-medium rounded-tr-md rounded-tl-md shadow-md">
         Request a Call Back
       </button>
     </section>

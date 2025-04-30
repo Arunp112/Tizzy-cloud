@@ -143,7 +143,7 @@ export default function Header() {
             {mobileDropdownOpen && (
               <div className="mt-1 ml-3 flex flex-col text-sm">
                 <Link
-                  to="/login/web mail"
+                  to="/login/webmail"
                   className="py-1"
                   onClick={() => setIsOpen(false)}
                 >
